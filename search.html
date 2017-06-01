@@ -1,493 +1,1 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>机票搜索</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-</head>
-<body>
-<div id="box">
-  <header>
-    <div id="logo"> <a href="#"><img src="img/logo.png"></a> </div>
-    <nav>
-      <ul>
-        <li><a class="a1" href="#"><span>0</span>紧急</a></li>
-        <li><a class="" href="#"><span>0</span>搜索次数</a></li>
-        <li><a class="a3" href="#"><span>0</span>附表<br/>
-          改变</a></li>
-        <li><a class="" href="#"><span>0</span>搜索限制</a></li>
-        <li><a class="a5" href="#"><span>0</span>本书算</a></li>
-      </ul>
-      <ul>
-        <li><a class="a6" href="#"><span>+ 8</span>时区<br/>
-          GMT时间</a></li>
-        <li><a class="a7" href="#"><span>17419.15</span>Cr.<br/>
-          USD</a></li>
-        <li><a class="a8" href="#"><span>0</span>机票<br/>
-          已预定</a></li>
-        <li><a class="a9" href="#"><span>0</span>机票<br/>
-          在队列中</a></li>
-        <li id="user"><a class="a10" href="#">Chrisy Zuo</a>
-          <div class="account">
-            <ol>
-              <li><a href="#">我的个人资料</a></li>
-              <li><a href="#">注销</a></li>
-            </ol>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <div class="menu">
-      <ul>
-        <li> <a href="#">航班</a>
-          <div class="menu_alert">
-            <ol>
-              <li><a href="#">航班搜索</a></li>
-            </ol>
-          </div>
-        </li>
-        <li> <a href="#">帐户</a>
-          <div class="menu_alert">
-            <ol>
-              <li><a href="#">交易</a></li>
-              <li><a href="#">生成付款链接</a></li>
-              <li><a href="#">发票清单</a></li>
-            </ol>
-          </div>
-        </li>
-        <li> <a href="#">列表</a>
-          <div class="menu_alert">
-            <ol>
-              <li><a href="#">配线队列</a></li>
-              <li><a href="#">预订队列</a></li>
-              <li><a href="#">车票订单队列</a></li>
-              <li><a href="#">票款队列</a></li>
-              <li><a href="#">例外队列</a></li>
-              <li><a href="#">您的预订</a></li>
-            </ol>
-          </div>
-        </li>
-        <li> <a href="#">管理员</a>
-          <div class="menu_alert">
-            <ol>
-              <li><a href="#">我的个人资料</a></li>
-            </ol>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <aside> <img class="padding_10" src="img/banner_3.png"/> </aside>
-    <article class="border_r_hui">
-      <div  class="tab margin_tb_20">
-        <ul>
-          <li><a id="danchengBtn" href="#">单程</a></li>
-          <li><a id="wangfanBtn" href="#">往返</a></li>
-          <li><a id="duochengBtn" href="#">多目的地</a></li>
-          <li><a id="RIPBtn" href="#">RIP</a></li>
-        </ul>
-      </div>
-      <div class="border_b_hui" name="单程往返" id="dancheng">
-        <div class="textTF1">
-          <label for="textfield2">从:</label>
-          <input type="text" name="textfield" id="textfield1" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">至:</label>
-          <input type="text" name="textfield" id="textfield2" placeholder="目的地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1">
-          <label for="textfield">出发:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield4" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22" id="wangfanAddr">
-          <label for="textfield">往返:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield5" placeholder="目的地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select8" id="select8">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <div class="textTF1 margin_l_22" id="wangfanTime">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select7" id="select7">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <br class="clear"/>
-      </div>
-      <div class="border_b_hui" name="多程" id="duocheng">
-        <div class="textTF1">
-          <label for="textfield2">从:</label>
-          <input type="text" name="textfield" id="textfield21" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">至:</label>
-          <input type="text" name="textfield" id="textfield22" placeholder="目的地">
-        </div>
-        <div class="textTF1">
-          <label for="textfield">出发:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1"> </div>
-        <div class="textTF1"> </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select7" id="select27">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <br class="clear"/>
-        <div class="textTF1">
-          <label for="textfield2">从:</label>
-          <input type="text" name="textfield" id="textfield21" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">至:</label>
-          <input type="text" name="textfield" id="textfield22" placeholder="目的地">
-        </div>
-        <div class="textTF1">
-          <label for="textfield">出发:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1"> </div>
-        <div class="textTF1"> </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select7" id="select27">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <br class="clear"/>
-        <div class="textTF1">
-          <label for="textfield2">从:</label>
-          <input type="text" name="textfield" id="textfield21" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">至:</label>
-          <input type="text" name="textfield" id="textfield22" placeholder="目的地">
-        </div>
-        <div class="textTF1">
-          <label for="textfield">出发:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1"> </div>
-        <div class="textTF1"> </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select7" id="select27">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <br class="clear"/>
-        <div class="textTF1">
-          <label for="textfield2">从:</label>
-          <input type="text" name="textfield" id="textfield21" placeholder="出发地">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">至:</label>
-          <input type="text" name="textfield" id="textfield22" placeholder="目的地">
-        </div>
-        <div class="textTF1">
-          <label for="textfield">出发:</label>
-          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">
-        </div>
-        <br class="clear"/>
-        <div class="textTF1"> </div>
-        <div class="textTF1"> </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield">时间:</label>
-          <select style="width: auto;" name="select7" id="select27">
-            <option value="">任何时间</option>
-            <option value="0">12 AM</option>
-            <option value="0100">01 AM</option>
-            <option value="0200">02 AM</option>
-            <option value="0300">03 AM</option>
-            <option value="0400">04 AM</option>
-            <option value="0500">05 AM</option>
-            <option value="0600">06 AM</option>
-            <option value="0700">07 AM</option>
-            <option value="0800">08 AM</option>
-            <option value="0900">09 AM</option>
-            <option value="1000">10 AM</option>
-            <option value="1100">11 AM</option>
-            <option value="1200">12 PM</option>
-            <option value="1300">01 PM</option>
-            <option value="1400">02 PM</option>
-            <option value="1500">03 PM</option>
-            <option value="1600">04 PM</option>
-            <option value="1700">05 PM</option>
-            <option value="1800">06 PM</option>
-            <option value="1900">07 PM</option>
-            <option value="2000">08 PM</option>
-            <option value="2100">09 PM</option>
-            <option value="2200">10 PM</option>
-            <option value="2300">11 PM</option>
-          </select>
-        </div>
-        <br class="clear"/>
-      </div>
-      <div class="border_b_hui" name="RIP" id="RIP">
-        <textarea name="textarea" id="textarea" style="width: 610px; height: 160px; border: 1px solid #ccc; margin-bottom: 5px;" placeholder="复制粘贴你的行程"></textarea>
-        <br class="clear"/>
-        <div class="textTF margin_r_20z">
-          <label for="textfield">GDS</label>
-          <select name="select9" id="select9">
-            <option value="Amadeus">Amadeus</option>
-            <option value="Sabre">Sabre</option>
-            <option value="Galileo">Galileo</option>
-            <option value="Worldspan">Worldspan</option>
-          </select>
-        </div>
-        <div class="textTF padding_r_10">
-          <label></label>
-          <p>
-            <input type="radio">
-            显示最低票价</p>
-        </div>
-        <div class="textTF padding_r_10">
-          <label></label>
-          <p>
-            <input type="radio">
-            替代选项</p>
-        </div>
-        <br class="clear padding_b_10"/>
-      </div>
-      <div class="border_b_hui padding_tb_5" name="高级搜索" id="gaoji">
-        <div class="textTF1">
-          <label for="textfield2">首选航空公司:</label>
-          <input type="text" name="textfield" id="textfield10" placeholder="例如AABB或CC 至多5航空公公司">
-        </div>
-        <div class="textTF1 margin_l_22">
-          <label for="textfield2">排除航空公司:</label>
-          <input type="text" name="textfield" id="textfield11" placeholder="例如AABB或CC 至多5航空公公司">
-        </div>
-        <br class="clear"/>
-        <div class="textTF padding_r_10">
-          <p>
-            <input type="checkbox">
-            所有航班</p>
-        </div>
-        <div class="textTF padding_r_10">
-          <p>
-            <input type="checkbox">
-            直飞航班</p>
-        </div>
-        <div class="textTF padding_r_10">
-          <p>
-            <input type="checkbox">
-            转机航班</p>
-        </div>
-        <br class="clear"/>
-        <label for="textfield2">票价类型:</label>
-        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">
-          <p>
-            <input type="checkbox">
-            常规运价</p>
-        </div>
-        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">
-          <p>
-            <input type="checkbox">
-            国际旅客票价</p>
-        </div>
-        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">
-          <p>
-            <input type="checkbox">
-            学生票价</p>
-        </div>
-        <br class="clear"/>
-      </div>
-      <div class="border_b_hui padding_tb_5" name="最后一行">
-        <div class="textTF margin_r_20">
-          <label for="textfield">成人</label>
-          <select name="select9" id="select19">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-        </div>
-        <div class="textTF margin_lr_20">
-          <label for="textfield">儿童:</label>
-          <select name="select6" id="select6">
-            <option value="">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-          </select>
-          <p>2-12 年</p>
-        </div>
-        <div class="textTF margin_lr_20">
-          <label for="textfield">婴儿:</label>
-          <select name="select4" id="select4">
-            <option value="">0</option>
-            <option value="1">1</option>
-          </select>
-          <p>0-2 年 无座</p>
-        </div>
-        <div class="textTF margin_lr_20">
-          <label for="textfield">级别:</label>
-          <select name="select2" id="select21">
-            <option value="1">经济</option>
-            <option value="2">超值经济</option>
-            <option value="3">公务</option>
-            <option value="4">头等</option>
-          </select>
-          <p>
-            <input type="checkbox">
-            仅限可退航班</p>
-        </div>
-        <br class="clear"/>
-      </div>
-      <div class="left padding_tb_10"> <a class="sub_btn f_left" href="#">搜索</a> <a id="gaojiBtn" class="back_btn f_left border_bx_hong" href="#">高级搜索</a> <br class="clear"/>
-      </div>
-    </article>
-  </section>
-  <footer>
-    <div class="f_left"> <a href="#">隐私权政策</a>　| <a href="#"> 使用条款</a> </div>
-    <div class="f_right footerlogo">© 2016 Mystifly Consulting Pvt. Ltd.</div>
-  </footer>
-</div>
-<script type="text/javascript" src="js/jquery.js"></script> 
-<script type="text/javascript" src="js/index.js"></script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="UTF-8"><title>机票搜索</title><link rel="stylesheet" type="text/css" href="css/css.css" /><link rel="stylesheet" type="text/css" href="css/index.css" /></head><body><div id="box">  <header>    <div id="logo"> <a href="#"><img src="img/logo.png"></a> </div>    <nav>      <ul>        <li><a class="a1" href="#"><span>0</span>紧急</a></li>        <li><a class="" href="#"><span>0</span>搜索次数</a></li>        <li><a class="a3" href="#"><span>0</span>附表<br/>          改变</a></li>        <li><a class="" href="#"><span>0</span>搜索限制</a></li>        <li><a class="a5" href="#"><span>0</span>本书算</a></li>      </ul>      <ul>        <li><a class="a6" href="#"><span>+ 8</span>时区<br/>          GMT时间</a></li>        <li><a class="a7" href="#"><span>17419.15</span>Cr.<br/>          USD</a></li>        <li><a class="a8" href="#"><span>0</span>机票<br/>          已预定</a></li>        <li><a class="a9" href="#"><span>0</span>机票<br/>          在队列中</a></li>        <li id="user"><a class="a10" href="#">Chrisy Zuo</a>          <div class="account">            <ol>              <li><a href="#">我的个人资料</a></li>              <li><a href="#">注销</a></li>            </ol>          </div>        </li>      </ul>    </nav>  </header>  <section>    <div class="menu">      <ul>        <li> <a href="#">航班</a>          <div class="menu_alert">            <ol>              <li><a href="search.html">航班搜索</a></li>            </ol>          </div>        </li>        <li> <a href="#">帐户</a>          <div class="menu_alert">            <ol>              <li><a href="#">交易</a></li>              <li><a href="#">生成付款链接</a></li>              <li><a href="#">发票清单</a></li>            </ol>          </div>        </li>        <li> <a href="#">列表</a>          <div class="menu_alert">            <ol>              <li><a href="#">配线队列</a></li>              <li><a href="order_list.html">预订队列</a></li>              <li><a href="#">车票订单队列</a></li>              <li><a href="#">票款队列</a></li>              <li><a href="#">例外队列</a></li>              <li><a href="#">您的预订</a></li>            </ol>          </div>        </li>        <li> <a href="#">管理员</a>          <div class="menu_alert">            <ol>              <li><a href="#">我的个人资料</a></li>            </ol>          </div>        </li>      </ul>    </div>    <aside> <img class="padding_10" src="img/banner_3.png"/> </aside>    <article class="border_r_hui">      <div  class="tab margin_tb_20">        <ul>          <li><a id="danchengBtn" href="#">单程</a></li>          <li><a id="wangfanBtn" href="#">往返</a></li>          <li><a id="duochengBtn" href="#">多目的地</a></li>          <li><a id="RIPBtn" href="#">RIP</a></li>        </ul>      </div>      <div class="border_b_hui" name="单程往返" id="dancheng">        <div class="textTF1">          <label for="textfield2">从:</label>          <input type="text" name="textfield" id="textfield1" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield">至:</label>          <input type="text" name="textfield" id="textfield2" placeholder="目的地">        </div>        <br class="clear"/>        <div class="textTF1">          <label for="textfield">出发:</label>          <input class="dateTF" type="text" name="textfield" id="textfield4" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22" id="wangfanAddr">          <label for="textfield">往返:</label>          <input class="dateTF" type="text" name="textfield" id="textfield5" placeholder="目的地">        </div>        <br class="clear"/>        <div class="textTF1">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select8" id="select8">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <div class="textTF1 margin_l_22" id="wangfanTime">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select7" id="select7">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <br class="clear"/>      </div>      <div class="border_b_hui" name="多程" id="duocheng">        <div class="textTF1">          <label for="textfield2">从:</label>          <input type="text" name="textfield" id="textfield21" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield">至:</label>          <input type="text" name="textfield" id="textfield22" placeholder="目的地">        </div>        <div class="textTF1">          <label for="textfield">出发:</label>          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">        </div>        <br class="clear"/>        <div class="textTF1"> </div>        <div class="textTF1"> </div>        <div class="textTF1 margin_l_22">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select7" id="select27">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <br class="clear"/>        <div class="textTF1">          <label for="textfield2">从:</label>          <input type="text" name="textfield" id="textfield21" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield">至:</label>          <input type="text" name="textfield" id="textfield22" placeholder="目的地">        </div>        <div class="textTF1">          <label for="textfield">出发:</label>          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">        </div>        <br class="clear"/>        <div class="textTF1"> </div>        <div class="textTF1"> </div>        <div class="textTF1 margin_l_22">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select7" id="select27">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <br class="clear"/>        <div class="textTF1">          <label for="textfield2">从:</label>          <input type="text" name="textfield" id="textfield21" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield">至:</label>          <input type="text" name="textfield" id="textfield22" placeholder="目的地">        </div>        <div class="textTF1">          <label for="textfield">出发:</label>          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">        </div>        <br class="clear"/>        <div class="textTF1"> </div>        <div class="textTF1"> </div>        <div class="textTF1 margin_l_22">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select7" id="select27">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <br class="clear"/>        <div class="textTF1">          <label for="textfield2">从:</label>          <input type="text" name="textfield" id="textfield21" placeholder="出发地">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield">至:</label>          <input type="text" name="textfield" id="textfield22" placeholder="目的地">        </div>        <div class="textTF1">          <label for="textfield">出发:</label>          <input class="dateTF" type="text" name="textfield" id="textfield24" placeholder="出发地">        </div>        <br class="clear"/>        <div class="textTF1"> </div>        <div class="textTF1"> </div>        <div class="textTF1 margin_l_22">          <label for="textfield">时间:</label>          <select style="width: auto;" name="select7" id="select27">            <option value="">任何时间</option>            <option value="0">12 AM</option>            <option value="0100">01 AM</option>            <option value="0200">02 AM</option>            <option value="0300">03 AM</option>            <option value="0400">04 AM</option>            <option value="0500">05 AM</option>            <option value="0600">06 AM</option>            <option value="0700">07 AM</option>            <option value="0800">08 AM</option>            <option value="0900">09 AM</option>            <option value="1000">10 AM</option>            <option value="1100">11 AM</option>            <option value="1200">12 PM</option>            <option value="1300">01 PM</option>            <option value="1400">02 PM</option>            <option value="1500">03 PM</option>            <option value="1600">04 PM</option>            <option value="1700">05 PM</option>            <option value="1800">06 PM</option>            <option value="1900">07 PM</option>            <option value="2000">08 PM</option>            <option value="2100">09 PM</option>            <option value="2200">10 PM</option>            <option value="2300">11 PM</option>          </select>        </div>        <br class="clear"/>      </div>      <div class="border_b_hui" name="RIP" id="RIP">        <textarea name="textarea" id="textarea" style="width: 610px; height: 160px; border: 1px solid #ccc; margin-bottom: 5px;" placeholder="复制粘贴你的行程"></textarea>        <br class="clear"/>        <div class="textTF margin_r_20z">          <label for="textfield">GDS</label>          <select name="select9" id="select9">            <option value="Amadeus">Amadeus</option>            <option value="Sabre">Sabre</option>            <option value="Galileo">Galileo</option>            <option value="Worldspan">Worldspan</option>          </select>        </div>        <div class="textTF padding_r_10">          <label></label>          <p>            <input type="radio">            显示最低票价</p>        </div>        <div class="textTF padding_r_10">          <label></label>          <p>            <input type="radio">            替代选项</p>        </div>        <br class="clear padding_b_10"/>      </div>      <div class="border_b_hui padding_tb_5" name="高级搜索" id="gaoji">        <div class="textTF1">          <label for="textfield2">首选航空公司:</label>          <input type="text" name="textfield" id="textfield10" placeholder="例如AABB或CC 至多5航空公公司">        </div>        <div class="textTF1 margin_l_22">          <label for="textfield2">排除航空公司:</label>          <input type="text" name="textfield" id="textfield11" placeholder="例如AABB或CC 至多5航空公公司">        </div>        <br class="clear"/>        <div class="textTF padding_r_10">          <p>            <input type="checkbox">            所有航班</p>        </div>        <div class="textTF padding_r_10">          <p>            <input type="checkbox">            直飞航班</p>        </div>        <div class="textTF padding_r_10">          <p>            <input type="checkbox">            转机航班</p>        </div>        <br class="clear"/>        <label for="textfield2">票价类型:</label>        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">          <p>            <input type="checkbox">            常规运价</p>        </div>        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">          <p>            <input type="checkbox">            国际旅客票价</p>        </div>        <div class="f_left border_hui padding_5 padding_r_20 margin_r_5">          <p>            <input type="checkbox">            学生票价</p>        </div>        <br class="clear"/>      </div>      <div class="border_b_hui padding_tb_5" name="最后一行">        <div class="textTF margin_r_20">          <label for="textfield">成人</label>          <select name="select9" id="select19">            <option value="1">1</option>            <option value="2">2</option>            <option value="3">3</option>            <option value="4">4</option>            <option value="5">5</option>            <option value="6">6</option>            <option value="7">7</option>            <option value="8">8</option>            <option value="9">9</option>          </select>        </div>        <div class="textTF margin_lr_20">          <label for="textfield">儿童:</label>          <select name="select6" id="select6">            <option value="">0</option>            <option value="1">1</option>            <option value="2">2</option>            <option value="3">3</option>            <option value="4">4</option>            <option value="5">5</option>            <option value="6">6</option>            <option value="7">7</option>            <option value="8">8</option>          </select>          <p>2-12 年</p>        </div>        <div class="textTF margin_lr_20">          <label for="textfield">婴儿:</label>          <select name="select4" id="select4">            <option value="">0</option>            <option value="1">1</option>          </select>          <p>0-2 年 无座</p>        </div>        <div class="textTF margin_lr_20">          <label for="textfield">级别:</label>          <select name="select2" id="select21">            <option value="1">经济</option>            <option value="2">超值经济</option>            <option value="3">公务</option>            <option value="4">头等</option>          </select>          <p>            <input type="checkbox">            仅限可退航班</p>        </div>        <br class="clear"/>      </div>      <div class="left padding_tb_10"> <a class="sub_btn f_left" href="search_list.html">搜索</a> <a id="gaojiBtn" class="back_btn f_left border_bx_hong" href="#">高级搜索</a> <br class="clear"/>      </div>    </article>  </section>  <footer>    <div class="f_left"> <a href="#">隐私权政策</a>　| <a href="#"> 使用条款</a> </div>    <div class="f_right footerlogo">© 2016 Mystifly Consulting Pvt. Ltd.</div>  </footer></div><script type="text/javascript" src="js/jquery.js"></script> <script type="text/javascript" src="js/index.js"></script></body></html>
