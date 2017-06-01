@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单查询列表</title>
+<link rel="stylesheet" type="text/css" href="css/css.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+<div id="box">
+  <header>
+    <div id="logo"> <a href="#"><img src="img/logo.png"></a> </div>
+    <nav id="menu">
+      <ul>
+        <li><a class="a1" href="#"><span>0</span>紧急</a></li>
+        <li><a class="" href="#"><span>0</span>搜索次数</a></li>
+        <li><a class="a3" href="#"><span>0</span>附表<br/>
+          改变</a></li>
+        <li><a class="" href="#"><span>0</span>搜索限制</a></li>
+        <li><a class="a5" href="#"><span>0</span>本书算</a></li>
+      </ul>
+      <ul>
+        <li><a class="a6" href="#"><span>+ 8</span>时区<br/>
+          GMT时间</a></li>
+        <li><a class="a7" href="#"><span>17419.15</span>Cr.<br/>
+          USD</a></li>
+        <li><a class="a8" href="#"><span>0</span>机票<br/>
+          已预定</a></li>
+        <li><a class="a9" href="#"><span>0</span>机票<br/>
+          在队列中</a></li>
+        <li id="user"><a class="a10" href="#">Chrisy Zuo</a>
+          <div class="account">
+            <ol>
+              <li><a href="#">我的个人资料</a></li>
+              <li><a href="#">注销</a></li>
+            </ol>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="menu">
+      <ul>
+        <li> <a href="#">航班</a>
+          <div class="menu_alert">
+            <ol>
+              <li><a href="#">航班搜索</a></li>
+            </ol>
+          </div>
+        </li>
+        <li> <a href="#">帐户</a>
+          <div class="menu_alert">
+            <ol>
+              <li><a href="#">交易</a></li>
+              <li><a href="#">生成付款链接</a></li>
+              <li><a href="#">发票清单</a></li>
+            </ol>
+          </div>
+        </li>
+        <li> <a href="#">列表</a>
+          <div class="menu_alert">
+            <ol>
+              <li><a href="#">配线队列</a></li>
+              <li><a href="#">预订队列</a></li>
+              <li><a href="#">车票订单队列</a></li>
+              <li><a href="#">票款队列</a></li>
+              <li><a href="#">例外队列</a></li>
+              <li><a href="#">您的预订</a></li>
+            </ol>
+          </div>
+        </li>
+        <li> <a href="#">管理员</a>
+          <div class="menu_alert">
+            <ol>
+              <li><a href="#">我的个人资料</a></li>
+            </ol>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h1 class="margin_t_20"><span><a class="font_red" href="#">隐藏过滤器</a></span><strong>您的预订</strong></h1>
+    <div class="form_box">
+      <div class="textTF0">
+        <label for="textfield">MyFareBox参考号码:</label>
+        <input type="text" name="textfield" id="textfield">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">票号:</label>
+        <input type="text" name="textfield" id="textfield1">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">发票:</label>
+        <input type="text" name="textfield" id="textfield2">
+      </div>
+      <hr/>
+      <div class="textTF0">
+        <label for="textfield">最早旅行日期:</label>
+        <input class="dateTF" type="text" name="textfield" id="textfield3">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">请选择最晚旅行日期:</label>
+        <input class="dateTF" type="text" name="textfield" id="textfield4">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">最早旅预定日期:</label>
+        <input class="dateTF" type="text" name="textfield" id="textfield5">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">请选择最晚预订日期:</label>
+        <input class="dateTF" type="text" name="textfield" id="textfield6">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">预订者:</label>
+        <input type="text" name="textfield" id="textfield7">
+      </div>
+      <hr/>
+      <div class="textTF0">
+        <label for="textfield">乘客 名:</label>
+        <input type="text" name="textfield" id="textfield8">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">乘客 姓:</label>
+        <input type="text" name="textfield" id="textfield9">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">输入业产地:</label>
+        <input type="text" name="textfield" id="textfield10">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">进入行业目标:</label>
+        <input type="text" name="textfield" id="textfield11">
+      </div>
+      <div class="textTF0">
+        <label for="textfield">航空公司:</label>
+        <input type="text" name="textfield" id="textfield12">
+      </div>
+      <hr>
+    </div>
+    <div class="right"> <a class="back_btn f_right" href="#">复位</a> <a class="sub_btn f_right" href="#">搜索</a> <br class="clear"/>
+    </div>
+    <div class="form_tab">
+      <table width="100%" border="0">
+        <tbody>
+          <tr>
+            <th scope="col">MF参考</th>
+            <th scope="col">客户</th>
+            <th scope="col">分公司</th>
+            <th scope="col">航段</th>
+            <th scope="col">旅客姓名</th>
+            <th scope="col">旅行日期</th>
+            <th scope="col">预定日期</th>
+            <th scope="col">预订者</th>
+            <th scope="col">订单管理</th>
+          </tr>
+          <tr>
+            <td><a href="#" class="font_red border_bx_hong">MF86290916</a></td>
+            <td>Bjing Weixingshiguang</td>
+            <td>Beijing</td>
+            <td>LAX-LAS</td>
+            <td>LI LI</td>
+            <td>02-1-2017</td>
+            <td>27-12-2016</td>
+            <td>WOTR XML</td>
+            <td>票款</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="font_red border_bx_hong">MF86290916</a></td>
+            <td>Bjing Weixingshiguang</td>
+            <td>Beijing</td>
+            <td>LAX-LAS</td>
+            <td>LI LI</td>
+            <td>02-1-2017</td>
+            <td>27-12-2016</td>
+            <td>WOTR XML</td>
+            <td>票款</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="font_red border_bx_hong">MF86290916</a></td>
+            <td>Bjing Weixingshiguang</td>
+            <td>Beijing</td>
+            <td>LAX-LAS</td>
+            <td>LI LI</td>
+            <td>02-1-2017</td>
+            <td>27-12-2016</td>
+            <td>WOTR XML</td>
+            <td>票款</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="yema"> <a href="#">头等</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">最后</a> </div>
+  </section>
+  <footer>
+    <div class="f_left"> <a href="#">隐私权政策</a>　| <a href="#"> 使用条款</a> </div>
+    <div class="f_right footerlogo">© 2016 Mystifly Consulting Pvt. Ltd.</div>
+  </footer>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
