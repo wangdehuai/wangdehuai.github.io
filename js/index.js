@@ -1,1 +1,0 @@
-$(function () {	$("#user").hover(function () {		$(".account").show(100);	}, function () {		$(".account").hide();	});	$(".menu ul li").hover(function () {		$(this).find(".menu_alert").show(100);	}, function () {		$(this).find(".menu_alert").hide();	});});
