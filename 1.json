@@ -1,1 +1,7 @@
-[{id:0,name:'java1 零基础',author: '宁楠'},{id:1,name:'java2 零基础',author: '宁楠'},{id:2,name:'java3 零基础',author: '宁楠'},{id:3,name:'java4 零基础',author: '宁楠'},{id:4,name:'java 零基础',author: '宁楠'},]
+[
+{"id":0,"name":"java1零基础","author":"宁楠"},
+{"id":1,"name":"java2零基础","author":"宁楠"},
+{"id":2,"name":"java3零基础","author":"宁楠"},
+{"id":3,"name":"java4零基础","author":"宁楠"},
+{"id":4,"name":"java零基础","author":"宁楠"}
+]
